@@ -1,0 +1,28 @@
+.text-input{
+    padding: 1px;
+    margin: 7px 0px;
+}
+
+.submit-btn{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    padding: 5px;
+    color: rgb(1, 44, 94);
+}
+
+
+.reg-form{    
+    background-color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 25px;
+}

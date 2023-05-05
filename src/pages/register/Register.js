@@ -11,14 +11,12 @@ export default function Register() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
-    const [birthday, setBirthday] = useState('');
     const [password, setPassword] = useState('');
     const [passwordAgain, setPasswordAgain] = useState('');
 
     const [firstNameError, setFirstNameError] = useState('');
     const [lastNameError, setLastNameError] = useState('');
     const [emailError, setEmailError] = useState('');
-    const [birthdayError, setBirthdayError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [passwordAgainError, setPasswordAgainError] = useState('');
 
@@ -59,18 +57,6 @@ export default function Register() {
         }
     }
 
-    // Handle input change for birthday field
-    const handleBirthdayChange = (event) => {
-        const value = event.target.value;
-        setBirthday(value);
-
-        if (!validateEmpty(value)) {
-            setBirthdayError('Please enter your birthday');
-        } else {
-            setBirthdayError('');
-        }
-    }
-
     // Handle input change for password field
     const handlePasswordChange = (event) => {
         const value = event.target.value;
@@ -102,13 +88,11 @@ export default function Register() {
             firstNameError ||
             lastNameError ||
             emailError ||
-            birthdayError ||
             passwordError ||
             passwordAgainError ||
             !firstName ||
             !lastName ||
             !email ||
-            !birthday ||
             !password ||
             !passwordAgain
           ) {
@@ -163,17 +147,7 @@ export default function Register() {
                         error={Boolean(emailError)}
                         helperText={emailError}
                     />
-                </div>
-                <div className='text-input'>
-                    <TextInputField
-                        name="birthday"
-                        type="date"
-                        value={birthday}
-                        onChange={handleBirthdayChange}
-                        error={Boolean(birthdayError)}
-                        helperText={birthdayError}
-                    />
-                </div>
+                </div>                
                 <div className='text-input'>
                     <TextInputField
                         name="password"
